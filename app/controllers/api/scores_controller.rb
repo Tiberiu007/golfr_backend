@@ -27,7 +27,7 @@ module Api
         }
       else
         render json: {
-          errors: "Invalid User ID"
+          errors: 'Invalid User ID'
         }, status: :bad_request
       end
     end
