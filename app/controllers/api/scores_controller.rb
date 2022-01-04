@@ -16,7 +16,7 @@ module Api
     end
 
     def show
-      user = User.find(params[:id])
+      user = User.find_by(id: params[:id])
       if user
         scores = user.scores.order(played_at: :desc, id: :desc).includes(:user)
         serialized_scores = scores.map(&:serialize)
